@@ -19,5 +19,3 @@ public/setting.ymlをいじってください。
 ruby disc.rb
 でbotが起動します。
 
-## 備考
-ruesei-koseki( https://github.com/ruesei-koseki )氏のフォークリポジトリです
