@@ -21,6 +21,9 @@ class WordExtractor
     n.each do |n|
       words << n.split("\t")[0] if n.split("\t")[1].split(",")[0] == "名詞"
     end
+    
+    words |= line.split(" ") unless line.split(" ")[0] == line
+    words |= line.split("　") unless line.split("　")[0] == line
 
     if @onAddWord
       words.each do |w|
