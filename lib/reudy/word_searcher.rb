@@ -31,7 +31,7 @@ module Gimite
       maxlen = 0
       max = 0
       words.each do |w|
-        if w.str.length > maxlen
+        if w.str.length >= maxlen
           maxlen = w.str.length
           max = i
         end
