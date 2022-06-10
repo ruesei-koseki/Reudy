@@ -24,24 +24,6 @@ module Gimite
 
     # 文中から既知の単語を探す
     def searchWords(sentence)
-      words = @wordSet.words.select { |word|
-        hasWord(sentence, word)
-      }
-      i = 0
-      maxlen = 0
-      max = 0
-      words.each do |w|
-        if w.str.length >= maxlen
-          maxlen = w.str.length
-          max = i
-        end
-        i += 1
-      end
-      if words == []
-        []
-      else
-        [words[max]]
-      end
-    end
+      @wordSet.words.select { |word| hasWord(sentence, word) }
   end
 end
