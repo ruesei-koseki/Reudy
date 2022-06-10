@@ -14,14 +14,11 @@ class WordExtractor
   # 文中で使われている単語を取得
   def extractWords(line, words = [])
     n = @m.parse(line)
-    
-    words |= line.split(" ") unless line.split(" ")[0] == line
-    words |= line.split("　") unless line.split("　")[0] == line
 
     n.each do |n|
-      words << n.split("\t")[0] if n.split("\t")[1].split(",")[0] == "名詞"
+      words << n.split("\t")[0]
     end
-    
+
     words |= line.split(" ") unless line.split(" ")[0] == line
     words |= line.split("　") unless line.split("　")[0] == line
 
