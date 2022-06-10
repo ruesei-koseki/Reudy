@@ -25,5 +25,6 @@ module Gimite
     # 文中から既知の単語を探す
     def searchWords(sentence)
       @wordSet.words.select { |word| hasWord(sentence, word) }
+    end
   end
 end
