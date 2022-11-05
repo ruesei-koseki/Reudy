@@ -1,7 +1,8 @@
+require 'bundler'
+Bundler.require
 
 require 'socket'
 require 'thread'
-require 'discordrb'
 require_relative 'reudy_common'
 
 module Gimite

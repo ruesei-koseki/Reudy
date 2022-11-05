@@ -1,6 +1,6 @@
 # Copyright (C) 2011 Glass_saga <glass.saga@gmail.com>
-
-require 'suika'
+require 'bundler'
+Bundler.require
 
 class WordExtractor
   # WordExtractor(単語候補リストを保持する長さ,単語追加時のコールバック)
