@@ -414,12 +414,10 @@ module Gimite
         if baseMsgN 
           output = replaceWords(getBaseMsgStr(baseMsgN), @inputWords, mustRespond)
           recordThought(1, simMsgN, baseMsgN, @newInputWords, output) if output
-        """
         else 
-          simMsgN, baseMsgN = getBaseMsgUsingKeyword(@newInputWords)
+          simMsgN, baseMsgN = replaceWords(getBaseMsgUsingKeyword(@newInputWords), @inputWords, mustRespond)
           output = getBaseMsgStr(baseMsgN) if baseMsgN
           recordThought(2, simMsgN, baseMsgN, @newInputWords, output) if output
-        """
         end
       else
         if baseMsgN 
@@ -432,14 +430,12 @@ module Gimite
             end
           end
           recordThought(3, simMsgN, baseMsgN, @inputWords, output) if output
-        """
         else 
           if mustRespond && !@inputWords.empty?
-            simMsgN, baseMsgN = getBaseMsgUsingKeyword(@inputWords) #最新でない入力語も使ってキーワード検索。
+            simMsgN, baseMsgN = replaceWords(getBaseMsgUsingKeyword(@inputWords), @inputWords, mustRespond) #最新でない入力語も使ってキーワード検索。
             output = getBaseMsgStr(baseMsgN) if baseMsgN
             recordThought(4, simMsgN, baseMsgN, @inputWords, output) if output
           end
-        """
         end
       end
       if mustRespond && !output 
