@@ -1,19 +1,21 @@
 ---
-:body: こんにちは
+:body: こんにちは。
 :fromNick: Default
 ---
 :body: おはよう。
 :fromNick: Default
 ---
-:body: こんばんは
+:body: こんばんは。
 :fromNick: Default
 ---
 :body: 何？
 :fromNick: Default
 ---
-:body: わからないよ
+:body: 不確定だ。
 :fromNick: Default
 ---
-:body: なぜ？
+:body: どうして？
 :fromNick: Default
-
+---
+:body: なんでやねん。
+:fromNick: Default
