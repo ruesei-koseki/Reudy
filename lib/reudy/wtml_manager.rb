@@ -1,12 +1,12 @@
-# Copyright (C) 2003 Gimite 市川 <gimite@mx12.freecom.ne.jp>
-# Modified by Glass_saga <glass.saga@gmail.com>
+#Copyright (C) 2003 Gimite 市川 <gimite@mx12.freecom.ne.jp>
+#Modified by Glass_saga <glass.saga@gmail.com>
 
 require_relative 'wordset'
 require_relative 'message_log'
 require_relative 'word_searcher'
 
 module Gimite
-  # 「単語→発言番号」リストを管理するもの。
+#「単語→発言番号」リストを管理するもの。
   class WordToMessageListManager
     def initialize(wordSet, log, wordSearcher)
       @wordSet = wordSet
@@ -14,21 +14,21 @@ module Gimite
       @wordSearcher = wordSearcher
       @log.addObserver(self)
     end
-
+    
     def onAddMsg
       msgN = @log.size - 1
       @wordSearcher.searchWords(@log[msgN].body).each do |word|
         word.mids.push(msgN)
       end
     end
-
+    
     def onClearLog
       @wordSet.words.each do |word|
         word.mids.clear
       end
     end
-
-    # 単語wordにmidsを付ける。
+    
+    #単語wordにmidsを付ける。
     def attachMsgList(word)
       word.mids = []
       @log.each_with_index do |log, i|

@@ -4,14 +4,12 @@
 
 # 1. IRCに接続する場合は、接続先のホスト名、ポート番号、文字コード、チャンネルを書いてください。
 
-:host: localhost
-#:host: irc.cre.ne.jp
-:port: 6667
+:host: irc.ircnet.ne.jp
+:port: 6668
 # Reudy1.9の内部ではここに入力された文字列でEncoding.findします。
 # UTF-8を指定する場合は"UTF-8"として下さい。その他のエンコーディングに関しては、irbなどでEncoding.name_listを参照して下さい。
-#:encoding: ISO-2022-JP
-:encoding: UTF-8
-:channel: "#talk"
+:encoding: ISO-2022-JP
+:channel: "#reudy_test"
 :info_channel: "#reudy_test"
 
 # 2. IRCのサーバ/チャンネルに入るのにパスワードが必要な場合は、指定してください。
@@ -20,22 +18,15 @@
 :channel_key:
 
 # Discordで動かす場合はトークンを指定してください
-:disc_token: ODU0NjcxODAxMDgyNzA3OTY5.YMnVJA.FnNuFnHwAnKbax4LOBxRtEOigxU
-:disc_channel: 891264746563719170
-
-:disc_log: 899105034137137182
-:teacher_mode: false
+:disc_token: <<BOTトークン>>
 
 # 3. 以下の項目は、変更しなくてもとりあえず動きます。必要に応じていじってください。
 
-:nick: alice
+:nick: ReudyTest
 :nicks: 
-  - アリスちゃん
-  - ありすちゃん
-  - アリス
-  - ありす
-  - Alice
-  - alice
+  - Reudy
+  - reudy
+  - ロイディ
 :default_mode: 2
 :joining_message: こんにちは。
 :leaving_message: さようなら。
@@ -44,11 +35,11 @@
 :disable_studying: false
 :respond_to_notice: false
 :respond_to_external: false
-:speak_with_privmsg: true
+:speak_with_privmsg: false
 :auto_reconnect: true
 :target_nick:
 :forbidden_nick:
-:wait_before_speak: 4
+:wait_before_speak: 0
 :wait_before_info: 0.2
 :name: Reudy1.9
 :real_name: Bot Reudy

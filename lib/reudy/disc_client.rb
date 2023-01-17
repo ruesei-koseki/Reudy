@@ -1,6 +1,4 @@
-require 'bundler'
-Bundler.require
-
+require 'discordrb'
 require 'socket'
 require 'thread'
 require_relative 'reudy_common'
@@ -79,6 +77,7 @@ module Gimite
 
         @now_channel.send(s)
       rescue => e
+        puts e
       end
     end
 
