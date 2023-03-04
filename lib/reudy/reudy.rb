@@ -444,7 +444,7 @@ module Gimite
           msgN = rand(log_size)
           if isUsableBaseMsg(msgN)
             baseMsgN = msgN
-            output = getBaseMsgStr(baseMsgN)
+            output = replaceWords(getBaseMsgStr(baseMsgN), @inputWords, mustRespond)
             break
           end
         end
